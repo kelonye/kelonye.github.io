@@ -21,5 +21,5 @@ imgs[0].click();
 // &copy;
 var now = new Date;
 var year = now.getUTCFullYear();
-var yearEl = document.getElementById('year');
-yearEl.innerHTML = year;
+var el = document.getElementById('year');
+el.innerHTML = year;
