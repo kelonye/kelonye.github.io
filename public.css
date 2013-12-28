@@ -19,14 +19,18 @@ body{
   font-size: 15px;
   color: #adafb3;
 }
+h1{
+  font-weight: normal;
+}
 main{
   margin: 20px 0;
 }
 main span,
 main a,
 main a:visited{
-  color: #777;
+  color: #f35;
   text-decoration: none;
+  outline: none;
 }
 main h1{
   font-size: 30px;
