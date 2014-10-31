@@ -20,11 +20,33 @@ body{
   font-size: 15px;
   font-weight: 300;
   color: #adafb3;
+  padding-top: 70px !important;
+}
+.top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: #eee;
+  padding: 5px 0;
+}
+.top a{
+  text-decoration: none;
+  outline: none;
+}
+.top a:hover{
+  text-decoration: underline;
+}
+.top a,
+.top a:visited{
+  color: #000;
 }
 main{
   margin: 20px 0;
 }
 footer a,
+footer a:visited,
 main span,
 main a,
 main a:visited{
