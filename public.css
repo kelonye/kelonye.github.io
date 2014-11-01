@@ -67,10 +67,11 @@ main ol li{
   list-style: none;
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 main ol li img{
-  width: 10pc;
+  width: 11pc;
   list-style: none;
   opacity: .8;
   border-radius: 2px;
