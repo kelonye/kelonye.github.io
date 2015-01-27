@@ -1,9 +1,22 @@
-// gallery
+// bind
 var fore = document.getElementById('fore');
 var imgs = document.querySelectorAll('ol img');
 var n = imgs.length;
 var img;
-var onclick = function(e){
+while (n--){
+  img = imgs[n];
+  img.onclick = onclick.bind(img);
+}
+imgs[0].click();
+
+// &copy;
+var now = new Date;
+var year = now.getUTCFullYear();
+var el = document.getElementById('year');
+el.innerHTML = year;
+
+// onlick img
+function onclick(e){
   var href = e.target.dataset.href;
   var src = e.target.src;
   var html = '';
@@ -16,14 +29,3 @@ var onclick = function(e){
   }
   this.style.opacity = 1;
 }
-while (n--){
-  img = imgs[n];
-  img.onclick = onclick.bind(img);
-}
-imgs[0].click();
-
-// &copy;
-var now = new Date;
-var year = now.getUTCFullYear();
-var el = document.getElementById('year');
-el.innerHTML = year;
