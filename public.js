@@ -11,10 +11,14 @@ var onclick = function(e){
   html += '<img src="'+src+'" width="940" height="450"/>';
   html += '</a>';
   fore.innerHTML = html;
+  for (var i=0; i<imgs.length; i++){
+    imgs[i].style.opacity = .5;
+  }
+  this.style.opacity = 1;
 }
 while (n--){
   img = imgs[n];
-  img.onclick = onclick;
+  img.onclick = onclick.bind(img);
 }
 imgs[0].click();
 
