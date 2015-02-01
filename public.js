@@ -20,7 +20,7 @@ function onclick(e){
   var href = e.target.dataset.href;
   var src = e.target.src;
   var html = '';
-  html += '<a href="'+href+'" target="external">';
+  html += '<a href="'+href+'" target="_blank">';
   html += '<img src="'+src+'" width="940" height="450"/>';
   html += '</a>';
   fore.innerHTML = html;
