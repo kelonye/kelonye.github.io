@@ -25,7 +25,7 @@ function onclick(e){
   html += '</a>';
   fore.innerHTML = html;
   for (var i=0; i<imgs.length; i++){
-    imgs[i].style.opacity = .5;
+    imgs[i].className = 'image--blurred';
   }
-  this.style.opacity = 1;
+  this.className = 'image--visible';
 }
