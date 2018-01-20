@@ -102,6 +102,10 @@ footer{
   opacity: .5;
 }
 
+td:nth-child(2) {
+  padding-left: 10px;
+}
+
 @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
   body{
     padding: 70px 100px;
