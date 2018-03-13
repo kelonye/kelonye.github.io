@@ -60,7 +60,7 @@ h1{
   margin: 50px 0;
 }
 h2{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   margin: 50px 0;
 }
@@ -102,6 +102,9 @@ footer{
   opacity: .5;
 }
 
+table {
+  font-size: 13px;
+}
 td:nth-child(2) {
   padding-left: 10px;
 }
