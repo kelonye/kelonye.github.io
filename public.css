@@ -1,27 +1,60 @@
-@-webkit-keyframes pop-in {
-  0% { opacity: 0; -webkit-transform: scale(0.5); }
-  100% { opacity: 1; -webkit-transform: scale(1); }
-}
-@-moz-keyframes pop-in {
-  0% { opacity: 0; -moz-transform: scale(0.5); }
-  100% { opacity: 1; -moz-transform: scale(1); }
-}
-@keyframes pop-in {
-  0% { opacity: 0; transform: scale(0.5); }
-  100% { opacity: 1; transform: scale(1); }
+:root {
+  --primaryColor: #f35;
 }
 
-*{
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+}
+@-ms-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -ms-transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: scale(1);
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+* {
   margin: 0;
   padding: 0;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
-body{
-  font-family: "Avenir", "URW Gothic L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+body {
+  font-family: "IBM Plex Mono", monospace;
   font-size: 2.5rem;
   font-weight: 300;
   color: #adafb3;
@@ -32,19 +65,39 @@ body{
 }
 
 a,
-a:visited{
-  color: #f35;
+a:visited {
+  color: var(--primaryColor);
   text-decoration: none;
   outline: none;
+  text-shadow: -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff,
+    3px 3px 0 #fff, 4px 4px 0 var(--primaryColor), 5px 5px 0 var(--primaryColor),
+    6px 6px 0 var(--primaryColor), 7px 7px 0 var(--primaryColor);
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin: 0;
+  text-align: center;
 }
 
-img{
-  max-width: 100%;
+a:hover {
+  opacity: 0.7;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  margin-top: -100px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 40px;
+
   -webkit-animation: pop-in 0.4s;
   -moz-animation: pop-in 0.4s;
   -ms-animation: pop-in 0.4s;
-}
-
-header {
-  margin-bottom: 30px;
+  animation: pop-in 0.4s;
 }
