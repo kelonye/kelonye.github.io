@@ -1,0 +1,97 @@
+:root {
+  --primaryColor: #f35;
+}
+
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+}
+@-ms-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -ms-transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: scale(1);
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Work Sans", monospace;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #adafb3;
+  background: black;
+  display: flex;
+}
+
+a,
+a:visited {
+  color: var(--primaryColor);
+  text-decoration: none;
+  outline: none;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+main {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 0 0 96px 96px;
+
+  -webkit-animation: pop-in 0.4s;
+  -moz-animation: pop-in 0.4s;
+  -ms-animation: pop-in 0.4s;
+  animation: pop-in 0.4s;
+}
+
+main > div:nth-of-type(1) {
+  margin-left: 2rem;
+}
+
+main > div:nth-of-type(2) {
+  margin-left: 1rem;
+}
